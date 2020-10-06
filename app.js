@@ -25,27 +25,34 @@ app.get('/', async (req, res) => {
     res.sendFile('public/index.html', { root: __dirname })
 })
 
-app.get('/home-content', async(req, res) => {
+app.get('/more-about-breed', (req, res) => {
+    res.sendFile('public/HTML/breed.html', { root: __dirname })
+})
+
+
+app.get('/home-content', async (req, res) => {
     try {
         let allBreeds = await axios.get('/breeds');
         allBreeds = allBreeds.data;
         let response = [];
-        let counter = 0
+        let counter = 0;
+        let result = null;
 
-        for (let i = 0; i < 5; i++){
-            axios.get('/images/search', { breed_ids: allBreeds[i]["id"] }).then(result => {
-                response.push(
-                    {
-                        id: allBreeds[i]["id"],
-                        name: allBreeds[i]["name"],
-                        find: result.data['0']['url']
-                    }
-                )
-                counter += 1;
-                if (counter == 5){
-                    res.send(response)
+        while (counter < 5) {
+            result = await axios.get('/images/search', { breed_ids: allBreeds[counter]["id"] })
+
+            response.push(
+                {
+                    id: allBreeds[counter]["id"],
+                    name: allBreeds[counter]["name"],
+                    img_url: result.data['0']['url']
                 }
-            })
+            )
+            counter++;
+            if (counter == 5) {
+                res.send(response)
+                break
+            }
         }
     } catch (e) {
         console.log(e)
@@ -54,21 +61,33 @@ app.get('/home-content', async(req, res) => {
 
 app.get('/search-breeds/:breed', async (req, res) => {
     try {
-        const possibleBreeds = await axios.get('/search', { q : req.params.breed });
+        searchBreed = req.params.breed.toLowerCase();
+        let possibleBreeds = await axios.get('/breeds/search?q=' + searchBreed)
+        possibleBreeds = possibleBreeds.data;
 
-        possibleBreeds.map(breed => {
-            return {
-                id: breed.id,
-                name: breed.name,
+        for(let i = 0; i < possibleBreeds.length; i++){
+            possibleBreeds[i] = {
+                id: possibleBreeds[i].id,
+                name: possibleBreeds[i].name,
             }
-        })
+        }
+        res.send(possibleBreeds)
     } catch (e) {
-        console.log(e.message)
+        console.log(e.message);
     }
 
 })
 
+app.get('/specific-breed/:breed-id', async (req, res) => {
+    try {
+        const speficBreed = axios.get(`/images/search?breed_ids=${req.params['breed-id']}`);
+        speficBreed = speficbreed[0];
 
+        res.send(speficBreed);
+    } catch (e) {
+        console.log(e.message)
+    }
+})
 app.listen(PORT, () => {
     console.log('Server running at the port: ' + PORT)
 })
