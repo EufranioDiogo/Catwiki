@@ -26,10 +26,14 @@
                     </div>
                     <h3 class="cat-wiki-desc">Get to know more about your cat breed</h3>
                     <div class="search-engine-div">
-                        <input type="text" class="input-engine" v-model="searchBreed" @input="search">
-                        <i class="fas fa-search search-icon" @click="searchBreed"></i>
+                        <input type="text" class="input-engine" v-model="searchBreed" @input="searchBreeds">
+                        <i v-if="search" class="fas fa-search search-icon" @click="searchBreed"></i>
+                        <i v-else class="fas fa-times search-icon" @click="cleanSearch"></i>
                     </div>
                 </div>
+                <ul v-if="!search" class="search-result">
+                    <li v-for="cat in possibleBreeds" class="search-result__item" @click="moreAbout(cat.id)">{{ cat.name }}</li>
+                </ul>
             </div>
 
             <div class="second-div">
@@ -40,10 +44,11 @@
                         <a href="#">See more<i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="bottom-part">
-                        <a href="">
+
+                        <a v-for="cat in randomCats" @click="moreAbout(cat.id)">
                             <div class="cat-img-most-searched-breeds">
-                                <img src="IMG/image 1.png" alt="" class="cat-img">
-                                <p>Cat name</p>
+                                <img :src="cat.img_url" :alt="cat.name" class="cat-img">
+                                <p>{{ cat.name }}</p>
                             </div>
                         </a>
                     </div>
@@ -72,6 +77,8 @@
 
         <p>&copy; Eufranio Diogo - devchallenges.io 2020</p>
     </footer>
+    <script src="JS/index.js"></script>
+    
 </body>
 
 </html>
