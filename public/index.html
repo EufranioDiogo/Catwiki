@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="CSS/index.css">
     <title>CatWiki</title>
 </head>
 
@@ -11,28 +14,21 @@
     <main class="main-container">
         <header class="header-catwiki">
             <div class="cat-wiki-logo">
-                <h2 class="cat-wiki-name">CatWiki</h2>
                 <img src="IMG/CatwikiLogo.svg" alt="cat">
             </div>
         </header>
 
         <section class="main-section">
             <div class="first-div">
-                <div class="top-div">
-                    <div class="info-div">
-                        <div class="cat-wiki-logo">
-                            <h2 class="cat-wiki-name">CatWiki</h2>
-                            <img src="IMG/CatwikiLogo.svg" alt="cat">
-                        </div>
-                        <h3 class="cat-wiki-desc">Get to know more about your cat breed</h3>
-                        <div class="search-engine-div">
-                            <input type="text" class="input-engine">
-                            <i></i>
-                        </div>
+                <div class="info-div">
+                    <div class="cat-wiki-logo">
+                        <img src="IMG/CatwikiLogoWhite.svg" alt="cat">
                     </div>
-                </div>
-                <div class="bottom-div">
-
+                    <h3 class="cat-wiki-desc">Get to know more about your cat breed</h3>
+                    <div class="search-engine-div">
+                        <input type="text" class="input-engine" v-model="searchBreed" @input="search">
+                        <i class="fas fa-search search-icon" @click="searchBreed"></i>
+                    </div>
                 </div>
             </div>
 
@@ -41,12 +37,12 @@
                 <div class="most-searched-breeds-preview-container">
                     <div class="top-part">
                         <h1>66+ Breeds For you to discover</h1>
-                        <a href="#">See more</a>
+                        <a href="#">See more<i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="bottom-part">
                         <a href="">
                             <div class="cat-img-most-searched-breeds">
-                                <img src="" alt="" class="cat-img">
+                                <img src="IMG/image 1.png" alt="" class="cat-img">
                                 <p>Cat name</p>
                             </div>
                         </a>
@@ -58,26 +54,24 @@
                 <div class="left-div">
                     <span class="upper-bar"></span>
                     <h1>Why should you have a cat?</h1>
-                    <p>Hak</p>
-                    <a href="#">Read More <i></i></a>
+                    <p>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves.</p>
+                    <a href="#">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="right-div">
-                    <img src="IMG/image 1.png" alt="">
                     <img src="IMG/image 2.png" alt="">
+                    <img src="IMG/image 1.png" alt="">
                     <img src="IMG/image 3.png" alt="">
                 </div>
             </div>
         </section>
-
-        <footer>
-            <div class="cat-wiki-logo">
-                <h2 class="cat-wiki-name">CatWiki</h2>
-                <img src="IMG/CatwikiLogo.svg" alt="cat">
-            </div>
-
-            <p>&copy; Eufranio Diogo - devchallenges.io 2020</p>
-        </footer>
     </main>
+    <footer>
+        <div class="cat-wiki-logo">
+            <img src="IMG/CatwikiLogoWhite.svg" alt="cat">
+        </div>
+
+        <p>&copy; Eufranio Diogo - devchallenges.io 2020</p>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+    height: 100%;
+}
+
+.main-container{
+    position: relative;
+    margin: 1rem  auto;
+    width: 80%;
+}
+.main-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.main-section .first-div{
+    background-image: url('../IMG/HeroImagelg.png');
+    border-radius: 2rem 2rem 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.first-div .info-div{
+    margin: 8rem 0;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 28%;
+}
+.info-div img{
+    width: 100%;
+}
+.info-div .cat-wiki-desc{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.info-div .search-engine-div{
+    display: flex;
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    position: relative;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-div .search-engine-div .input-engine{
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    padding-right: 1rem;
+    border: none;
+    position: relative;
+    width: 90%;
+}
+.info-div .search-engine-div .search-icon{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #333333ad;
+    cursor: pointer;
+}
+.info-div .search-engine-div .search-icon:hover{
+    color: #333333;
+}
+.second-div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    width: 100%;
+    background-color: #E3E1DC;
+    border-radius: 0 0 2rem 2rem;
+}
+.second-div .most-searched-breeds{
+    color: #291507;
+    font-size: 1.2rem;
+    font-family: Montserrat, sans-serif;
+    margin: 1rem 3rem;
+}
+.second-div .most-searched-breeds-preview-container .top-part{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3rem;
+}
+.second-div .most-searched-breeds-preview-container .top-part h1{
+    font-size: 2.5rem;
+    font-family: Montserrat, sans-serif;
+    color: #291507;
+    display: inline-block;
+    width: 45%;
+    padding: 0;
+    margin: 0;
+}
+.second-div .most-searched-breeds-preview-container .top-part a{
+    align-self: flex-end;
+    text-decoration: none;
+    color: #333;
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+}
+.second-div .most-searched-breeds-preview-container .top-part a i{
+    margin-left: 1rem;
+    transition: 0.5s;
+}
+.second-div .most-searched-breeds-preview-container .top-part a:hover  i{
+    margin-left: 0.5rem;
+}
+.bottom-part{
+    margin: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-part a{
+    text-decoration: none;
+}
+.bottom-part .cat-img-most-searched-breeds{
+    display: flex;
+    flex-direction: column;
+}
+.bottom-part .cat-img-most-searched-breeds .cat-img{
+    border-radius: 1rem;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+.bottom-part .cat-img-most-searched-breeds p{
+    font-family: Montserrat, sans-serif;
+    color: #111;
+    font-weight: 700;
+}
+.third-div{
+    position: relative;
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.third-div .left-div{
+    padding: 0 4rem;
+    width: 65%;
+}
+.third-div .right-div{
+    padding: 0 4rem;
+    columns: 2;
+    line-height: 40px;
+    width: 30%;
+}
+.third-div .right-div img{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.third-div .left-div h1{
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+}
+.third-div .left-div p{
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+}
+.third-div .left-div a{
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+    color: #333;
+    display: inline-block;
+    text-decoration: none;
+}
+.third-div .left-div i{
+    margin-left: 0.5rem;
+    transition: 0.5s;
+}
+.third-div .left-div a:hover i{
+    margin-left: 1.5rem;
+}
+footer {
+    display: flex;
+    padding: 0.5rem 0;
+    width: 80%;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #111;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+footer div{
+    margin-left: 2rem;
+}
+footer p{
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    margin-right: 2rem;
+}
