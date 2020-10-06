@@ -1,0 +1,81 @@
+.main-container{
+    width: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0;
+    font-family: Montserrat, sans-serif;
+}
+.main-container .upper-div{
+    display: flex;
+    justify-content: space-between;
+}
+.main-container .upper-div .img-container{
+    width: 25%;
+    display: block;
+    position: relative;
+}
+.main-container .upper-div .desc-container{
+    width: 65%;
+}
+.desc-container .cat-name{
+    font-weight: 800;
+}
+.desc-container .paragraph{
+    font-size: 1.0rem;
+    color: #333;
+}
+.desc-container .paragraph strong{
+    font-weight: bolder;
+    color: #000;
+}
+.desc-container .skills-and-habilities-container{
+    margin-top: 2rem;
+}
+.skills-and-habilities-container{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    width: 85%;
+    justify-self: flex-start;
+}
+.skills-and-habilities-container .row{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row .hability-skill-name{
+    font-size: 1rem;
+    color: #000;
+    font-weight: 800;
+}
+.row .hability-skill-level{
+    display: flex;
+}
+.row .hability-skill-level .hability-skill-level__leveler{
+    display: block;
+    padding: 0.3rem 1.5rem;
+    border-radius: 1rem;
+    background-color: #33333351;
+    margin: 0 0.5rem;
+}
+.photos-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.photos-container .photos-container__photos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.photos-container__photos img{
+    width: 15.8rem;
+    height: 15.8rem;
+    position: relative;
+    display: block;
+}
