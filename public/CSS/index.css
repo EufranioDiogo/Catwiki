@@ -160,7 +160,6 @@ body{
     transition: 0.5s;
 }
 .bottom-part .cat-img-most-searched-breeds .cat-img:hover{
-    border-radius: 0.5rem;
     transform: scale(1.15);
 }
 .bottom-part .cat-img-most-searched-breeds p{
@@ -232,4 +231,74 @@ footer p{
     color: #fff;
     font-family: Montserrat, sans-serif;
     margin-right: 2rem;
+}
+@media only screen and (max-width: 765px){
+    .main-container{
+        width: 90%;
+    }
+    .main-section .first-div{
+        background-image: url('../IMG/HeroImagesm.png');
+    }
+    .first-div .info-div{
+        margin: 4rem 0;
+        margin-left: 1rem;
+        width: 90%;
+    }
+    .info-div .cat-wiki-desc{
+        font-size: 1rem;
+    }
+    .search-result{
+        width: 90%;
+    }
+    .second-div{
+        position: relative;
+        height: auto;
+    }
+    .top-part{
+        margin-left: 0.5rem !important;
+    }
+    .bottom-part{
+        flex-wrap: wrap;
+        margin-left: 0.5rem !important;
+    }
+    .second-div .most-searched-breeds{
+        font-size: 0.8rem;
+        margin-left: 0.5rem !important;
+    }
+    .second-div .most-searched-breeds-preview-container .top-part h1{
+        font-size: 1.2rem;
+        padding: 1rem 0.5rem;
+    }
+    .bottom-part .cat-img-most-searched-breeds .cat-img{
+        width: 8rem;
+        height: 8rem;
+    }
+    .third-div{
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding: 0 0.5rem;
+    }
+    .third-div .left-div{
+        padding: 0;
+        width: 100%;
+    }
+    .third-div .right-div{
+        padding: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    footer {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer img {
+        margin: 0;
+    }
+    footer p {
+        text-align: center;
+        margin-right: 0;
+    }
 }
