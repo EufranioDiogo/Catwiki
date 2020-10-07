@@ -4,10 +4,10 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 const axios = require('axios');
-const API_KEY = '152ead9a-93db-4284-8bce-994a390b11d2';
+const API_KEY = 'APIKEY';
 const API_URL = 'https://api.thecatapi.com/v1';
 const mongoose = require('mongoose');
-const DBURI = 'mongodb+srv://restaurants:test1234@cluster0.dfuhn.mongodb.net/cats?retryWrites=true&w=majority';
+const DBURI = 'mongodb+srv://<username>:<password>@cluster0.dfuhn.mongodb.net/<db>?retryWrites=true&w=majority';
 const Cat = require('./models/cat')
 
 mongoose.connect(DBURI, () => {
