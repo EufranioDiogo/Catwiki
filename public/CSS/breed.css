@@ -1,4 +1,4 @@
-.main-container{
+.main-container {
     width: 75%;
     position: relative;
     display: flex;
@@ -8,74 +8,105 @@
     margin: 2rem 0;
     font-family: Montserrat, sans-serif;
 }
-.main-container .upper-div{
+
+.main-container .upper-div {
     display: flex;
     justify-content: space-between;
 }
-.main-container .upper-div .img-container{
-    width: 25%;
+
+.main-container .upper-div .img-container {
+    width: 28%;
     display: block;
     position: relative;
 }
-.main-container .upper-div .desc-container{
+
+.img-container img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.2rem 0.3rem #00000031;
+    margin-top: 1.5rem;
+}
+
+.main-container .upper-div .desc-container {
     width: 65%;
 }
-.desc-container .cat-name{
+
+.desc-container .cat-name {
     font-weight: 800;
 }
-.desc-container .paragraph{
+
+.desc-container .paragraph {
     font-size: 1.0rem;
     color: #333;
 }
-.desc-container .paragraph strong{
+
+.desc-container .paragraph strong {
     font-weight: bolder;
     color: #000;
 }
-.desc-container .skills-and-habilities-container{
+
+.desc-container .skills-and-habilities-container {
     margin-top: 2rem;
 }
-.skills-and-habilities-container{
+
+.skills-and-habilities-container {
     display: flex;
     flex-direction: column;
     flex: auto;
     width: 85%;
     justify-self: flex-start;
 }
-.skills-and-habilities-container .row{
-    margin: 1rem 0;
+
+.skills-and-habilities-container .row {
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.row .hability-skill-name{
+
+.row .hability-skill-name {
     font-size: 1rem;
     color: #000;
     font-weight: 800;
 }
-.row .hability-skill-level{
+
+.row .hability-skill-level {
     display: flex;
 }
-.row .hability-skill-level .hability-skill-level__leveler{
+
+.row .hability-skill-level .hability-skill-level__leveler {
     display: block;
     padding: 0.3rem 1.5rem;
     border-radius: 1rem;
     background-color: #33333351;
     margin: 0 0.5rem;
 }
-.photos-container{
+
+.photos-container {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
 }
-.photos-container .photos-container__photos{
+
+.photos-container .photos-container__photos {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    
+    margin-top: 3rem;
 }
-.photos-container__photos img{
+
+.photos-container__photos img {
     width: 15.8rem;
     height: 15.8rem;
     position: relative;
     display: block;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.photos-container__photos img:hover{
+    opacity: 0.8;
 }

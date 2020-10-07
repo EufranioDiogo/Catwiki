@@ -146,16 +146,22 @@ body{
 }
 .bottom-part a{
     text-decoration: none;
+    cursor: pointer;
 }
 .bottom-part .cat-img-most-searched-breeds{
     display: flex;
     flex-direction: column;
 }
 .bottom-part .cat-img-most-searched-breeds .cat-img{
-    border-radius: 1rem;
+    border-radius: 10rem;
     width: 10rem;
     height: 10rem;
     object-fit: cover;
+    transition: 0.5s;
+}
+.bottom-part .cat-img-most-searched-breeds .cat-img:hover{
+    border-radius: 0.5rem;
+    transform: scale(1.15);
 }
 .bottom-part .cat-img-most-searched-breeds p{
     font-family: Montserrat, sans-serif;

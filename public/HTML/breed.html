@@ -3,31 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/univesal.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="../CSS/univesal.css">
     <link rel="stylesheet" href="CSS/breed.css">
-    <title>Beard</title>
+    <title>Breed</title>
 </head>
 <body>
+
     <main class="main-container">
+        <a href="/">
+            <img src="IMG/CatwikiLogo.svg" alt="cat">
+        </a>
         <div class="upper-div">
             <div class="img-container">
-                <img src="" alt="">
+                <img :src="catImg" :alt="cat.name">
             </div>
             <div class="desc-container">
-                <h2 class="cat-name">Bengal</h2>
-                <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque reiciendis eaque nesciunt molestias quod quae dolor! Veritatis nesciunt alias atque cum, beatae maiores reprehenderit voluptates excepturi consectetur. Neque ad, accusamus, distinctio modi rem, quo earum dolores officiis natus non quia provident deserunt sint perferendis tempore iste molestiae. Nesciunt, perferendis ut.</p>
-                <p class="paragraph"><strong>Temperament:</strong> jdsndjn</p>
-                <p class="paragraph"><strong>Origin:</strong> jdsndjn</p>
-                <p class="paragraph"><strong>Life Span:</strong> jdsndjn</p>
+                <h2 class="cat-name">{{ cat.name }}</h2>
+                <p class="paragraph">{{ cat.description }}</p>
+                <p class="paragraph"><strong>Temperament:</strong> {{ cat.temperament }}</p>
+                <p class="paragraph"><strong>Origin:</strong> {{ cat.origin }}</p>
+                <p class="paragraph"><strong>Life Span:</strong> {{ cat.life_span }}</p>
                 <div class="skills-and-habilities-container">
                     <div class="row">
                         <h3 class="hability-skill-name">Adaptabilty:</h3>
                         <ul class="hability-skill-level">
-                            <li class="hability-skill-level__leveler"></li>
-                            <li class="hability-skill-level__leveler"></li>
-                            <li class="hability-skill-level__leveler"></li>
-                            <li class="hability-skill-level__leveler"></li>
-                            <li class="hability-skill-level__leveler"></li>
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.adaptability ? '#333':'#33333351'}"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="hability-skill-name">Affection level:</h3>
+                        <ul class="hability-skill-level">
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.affection_level ? '#333':'#33333351'}"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="hability-skill-name">Child Friendly:</h3>
+                        <ul class="hability-skill-level">
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.child_friendly ? '#333':'#33333351'}"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="hability-skill-name">Grooming:</h3>
+                        <ul class="hability-skill-level">
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.grooming ? '#333':'#33333351'}"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="hability-skill-name">Intellingence:</h3>
+                        <ul class="hability-skill-level">
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.intelligence ? '#333':'#33333351'}"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="hability-skill-name">Health issues:</h3>
+                        <ul class="hability-skill-level">
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.health_issues ? '#333':'#33333351'}"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="hability-skill-name">Social needs:</h3>
+                        <ul class="hability-skill-level">
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.social_needs ? '#333':'#33333351'}"></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <h3 class="hability-skill-name">Stranger friendly:</h3>
+                        <ul class="hability-skill-level">
+                            <li v-for="value in 5" class="hability-skill-level__leveler" :style="{'background-color': value <= cat.stranger_friendly ? '#333':'#33333351'}"></li>
                         </ul>
                     </div>
                 </div>
@@ -38,9 +81,10 @@
                 <h2>Other photos</h2>
             </div>
             <div class="photos-container__photos">
-                <img src="" alt="" class="photos-container__photos__photo">
+                <img v-for="url in otherCatImgs" :src="url" :alt="cat.name" class="photos-container__photos__photo">
             </div>
         </div>
     </main>
+    <script src="../JS/breed.js"></script>
 </body>
 </html>

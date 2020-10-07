@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="../CSS/univesal.css">
+    <link rel="stylesheet" href="../CSS/top-cat.css">
+    <title>Top 10</title>
+</head>
+<body>
+    <main class="main-container">
+        <header class="header-catwiki">
+            <a href="/" class="cat-wiki-logo">
+                <img src="IMG/CatwikiLogo.svg" alt="cat">
+            </a>
+        </header>
+
+        <ul class="top-cats-list">
+            <a v-for="cat in cats" class="cat-link" @click="moreabout(cat.breeds[0].id)">
+                <li class="cat-brief-desc">
+                    <img :src="cat.url" :alt="cat.breeds[0].name">
+                    <div class="brief-desc">
+                        <h2 class="cat-name">{{ cat.breeds[0].name }}</h2>
+                        <p class="p-brief-desc"> {{ cat.breeds[0].description }}</p>
+                    </div>
+                </li>
+            </a>
+        </ul>
+        
+    </main>
+    <footer>
+        <div class="cat-wiki-logo">
+            <img src="IMG/CatwikiLogoWhite.svg" alt="cat">
+        </div>
+
+        <p>&copy; Eufranio Diogo - devchallenges.io 2020</p>
+    </footer>
+    <script src="../JS/top-cats.js"></script>
+</body>
+</html>
