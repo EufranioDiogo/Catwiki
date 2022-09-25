@@ -2,10 +2,10 @@ const catId = window.location.href.split('?')[1].split('=')[1];
 
 async function getCatInfo(id){
     const response = await fetch('/specific-breed/' + catId);
-    const data = await response.json();
+    const breed = await response.json();
 
-    app.cat = data.breeds[0];
-    app.catImg = data.url;
+    app.cat = breed;
+    app.catImg = breed.url;
 }
 
 async function getCatOtherPhotos(id){

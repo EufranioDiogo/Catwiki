@@ -151,9 +151,10 @@ body{
 .bottom-part .cat-img-most-searched-breeds{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .bottom-part .cat-img-most-searched-breeds .cat-img{
-    border-radius: 10rem;
+    border-radius: 0.5rem;
     width: 10rem;
     height: 10rem;
     object-fit: cover;
@@ -162,7 +163,7 @@ body{
 .bottom-part .cat-img-most-searched-breeds .cat-img:hover{
     transform: scale(1.15);
 }
-.bottom-part .cat-img-most-searched-breeds p{
+.bottom-part .cat-img-most-searched-breeds .cat-name{
     font-family: Montserrat, sans-serif;
     color: #111;
     font-weight: 700;
@@ -213,6 +214,34 @@ body{
 .third-div .left-div a:hover i{
     margin-left: 1.5rem;
 }
+
+.loader-spinner {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 10rem;
+    border: 0.4rem solid #333;
+    border-right-color: aqua;
+    animation: rotation 2s linear 0s infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(90deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    75% {
+        transform: rotate(270deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
 footer {
     display: flex;
     padding: 0.5rem 0;

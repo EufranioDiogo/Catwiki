@@ -45,10 +45,13 @@
                     </div>
                     <div class="bottom-part">
 
+                        <div class="loader-spinner" v-if="randomCats.length == 0">
+
+                        </div>
                         <a v-for="cat in randomCats" @click="moreAbout(cat.id)">
                             <div class="cat-img-most-searched-breeds">
                                 <img :src="cat.img_url" :alt="cat.name" class="cat-img">
-                                <p>{{ cat.name }}</p>
+                                <p class="cat-name">{{ cat.name }}</p>
                             </div>
                         </a>
                     </div>
